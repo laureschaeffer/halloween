@@ -1,6 +1,7 @@
 # Responsive Halloween Website
 
-Project responsive design with HTML, CSS and Javascript
+Project responsive design with HTML, CSS and Javascript  
+Using [atropos js](https://atroposjs.com/) to create 3D hover effects
 
 Recreating Bedimcode's tutorial
 
@@ -8,4 +9,4 @@ Recreating Bedimcode's tutorial
 [Github project](https://github.com/bedimcode/responsive-halloween-website-4)
 
 
-![preview img](/preview.png)
+![preview img](/preview.gif)

@@ -161,6 +161,10 @@ img {
 }
 
 /* Add shadow header */
+.shadow-header{
+  background-color: var(--body-color);
+  box-shadow: 0 2px 16px hsla(25, 48%, 12%, .2);
+}
 
 
 /*=============== HOME ===============*/
@@ -222,7 +226,9 @@ img {
   animation: flicker 8s linear infinite;
 }
 
-/* Animated images */
+/* Animated images 
+-> create a glitch effect
+*/
 @keyframes flicker {
   0%{
     opacity: 0;
@@ -243,22 +249,138 @@ img {
   34.98%{
     opacity: 0;
   }
+
   35%{
     opacity: 1;
   }
+  35.7%{
+    opacity: 1;
+  }
+  35.72%{
+    opacity: 0;
+  }
+  36.98%{
+    opacity: 0;
+  }
+  37%{
+    opacity: 1;
+  }
+  37.62%{
+    opacity: 1;
+  }
+
+  67.98%{
+    opacity: 1;
+  }
+  68%{
+    opacity: 1;
+  }
+  68.4%{
+    opacity: 1;
+  }
+  68.42%{
+    opacity: 0;
+  }
+  
+  95.98%{
+    opacity: 0;
+  }
+  96%{
+    opacity: 1;
+  }
+  96.7%{
+    opacity: 1;
+  }
+  96.72%{
+    opacity: 0;
+  }
+  98.98%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 1;
+  }
+  99.6%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+  }
+
 }
 
 /* Atropos class */
+.atropos-inner{
+  overflow: initial;
+}
 
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container{
+    margin-inline: 1rem;
+  }
+}
 
+@media screen and (min-width: 350px) and (max-height: 680px) {
+  .home__container{
+    height: 780px;
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px){
+  .home__container{
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+}
 
 
 /* For large devices */
+@media screen and (min-width: 1150px){
+  .container{
+    margin-inline: auto;
+  }
 
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 5rem;
+  }
+
+  .home__container{
+    grid-template-columns: 512px 560px;
+    align-items: center;
+    column-gap: 3rem;
+  }
+  .home__data{
+    text-align: initial;
+  }
+  .home__description{
+    padding-right: 9rem;
+    margin-bottom: 3rem;
+  }
+  .home__img-1,
+  .home__img-2{
+    width: 560px;
+  }
+
+}
 
 /* For taller devices */
+@media screen and (max-width: 1150px) and (min-height: 900px){
+  .home__container{
+    align-content: center;
+  }
+}
